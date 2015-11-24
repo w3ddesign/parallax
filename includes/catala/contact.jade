@@ -1,0 +1,40 @@
+section#fourth-section
+
+	h2#contact CONTACTA'NS
+
+	h3 Acceptem les vostres propostes
+	
+	span.line
+
+	form(action="form.php", method="POST")
+
+		p.field
+			label(for="name") Name: 
+			input(type="text" id="name" placeholder="NOM" required)
+		p.field
+			label(for="email") Email Address:
+			input(type="email" id="email" placeholder="EMAIL" required)
+		p.field
+			label(for="subject") What can I help you with?
+			input(type="text" id="subject" placeholder="MOTIU")
+		p.field
+			label(for="budget") Project budget:
+			select(id="budget" placeholder="PRESSUPOST" required)
+				option(value="default" id="default") PRESSUPOST
+				option(value="lessthanone") Menys de 1000 &euro;
+				option(value="onetotwo") Entre 1000 i 2000 &euro;
+				option(value="twotothree") Entre 2000 i 3000 &euro;
+				option(value="threetofive") Entre 3000 i 5000 &euro;
+				option(value="morethanfive") Mes de 5000 &euro;
+				option(value="noidea") No estic segur
+		p.field
+			label(for="message") The datails:
+			textarea(cols="50", rows="6" placeholder="DESCRIPCIÓ PROJECTE" required)
+
+		div#status
+			.button
+				button(id="submit") ENVIAR
+				
+				div#success.message Missatge enviat
+
+				div#error.message Error al enviar

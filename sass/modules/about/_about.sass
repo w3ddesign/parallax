@@ -1,0 +1,52 @@
+#first-section
+	background: $light-bg
+
+	.description
+		display: flex
+		max-width: $guide
+		width: 90%
+		margin: 0 auto
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+		padding: 3em 0
+
+		p
+			width: 450px
+			padding: 0
+			margin-left: 100px
+
+		.members
+			display: flex
+			flex-grow: 1
+			justify-content: center
+			background:
+				image: url(../images/about/desktop.svg)
+				repeat: no-repeat
+				position: bottom center
+				size: cover
+
+			figure
+				figcaption
+					margin-top: 25px
+					text-align: center
+					color: $light-green
+
+
+@media screen and (max-width: 65em)
+
+	#first-section
+
+		.description
+			p
+				max-width: 800px
+				padding-left: 0px
+				margin: 1.5em auto
+
+@media screen and (max-width: 30em)
+	
+	#first-section
+		.description
+			p
+				font-size: 1.2em
+				text-align: left

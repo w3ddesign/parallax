@@ -1,0 +1,13 @@
+.ir-arriba
+	display: inline-block
+	padding: 20px
+	background: url(../images/icons/angle-up.svg) no-repeat center center
+	font-size: 24px
+	cursor: pointer
+	+position(fixed, 7% 1.9% null null)
+	z-index: 9999 !important
+	opacity: 0
+	transition: opacity 1s ease
+
+	&.show
+		opacity: 1

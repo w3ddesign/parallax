@@ -1,0 +1,22 @@
+section#fifth-section
+	h2 TECNOLOGIA
+	h3 Eïnes
+	span.line
+
+
+	<!-- Herramientas MIXIN -->
+
+	mixin tools(img,alt,link)
+		a(href="#{link}")
+			img(src="#{img}", alt="#{alt}")
+
+	div.tools
+
+		+tools("images/tools/html.svg", "HTML5", "http://www.w3.org/TR/html5/")
+		+tools("images/tools/css.svg", "CSS3", "http://www.w3c.es/Divulgacion/GuiasBreves/HojasEstilo")
+		+tools("images/tools/js.svg", "JAVASCRIPT", "https://developer.mozilla.org/es/docs/Web/JavaScript")
+		+tools("images/tools/svg.svg", "SVG", "http://www.w3.org/Graphics/SVG/")
+		+tools("images/tools/sass1.svg", "SASS", "http://sass-lang.com/")
+		+tools("images/tools/jade1.svg", "JADE", "http://jade-lang.com/")
+		+tools("images/tools/bourbon1.svg", "BOURBON", "http://bourbon.io/")
+		

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1920px" height="1000px" viewBox="0 0 1920 1000" enable-background="new 0 0 1920 1000" xml:space="preserve">
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="0" y="0" width="1923.146" height="1000"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		
+			<linearGradient id="cielo_1_" gradientUnits="userSpaceOnUse" x1="1281.533" y1="-481.973" x2="1281.5331" y2="736.409" gradientTransform="matrix(1 0 0 -1 -320.96 718.34)">
+			<stop  offset="0.5108" style="stop-color:#B9D1BD"/>
+			<stop  offset="1" style="stop-color:#A7CED3"/>
+		</linearGradient>
+		<rect id="cielo" x="-2" y="-18.069" clip-path="url(#SVGID_2_)" fill="url(#cielo_1_)" width="1925.146" height="1218.382"/>
+	</g>
+</g>
+</svg>

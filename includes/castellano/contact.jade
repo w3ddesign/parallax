@@ -1,0 +1,40 @@
+section#fourth-section
+
+	h2#contact CONTÁCTANOS
+
+	h3 Aceptamos vuestras propuestas
+	
+	span.line
+
+	form(action="form.php", method="POST")
+
+		p.field
+			label(for="name") Name: 
+			input(type="text" name="name" id="name" placeholder="NOMBRE" required)
+		p.field
+			label(for="email") Email Address:
+			input(type="email" name="email" id="email" placeholder="EMAIL" required)
+		p.field
+			label(for="subject") What can I help you with?
+			input(type="text" name="subject" id="subject" placeholder="ASUNTO")
+		p.field
+			label(for="budget") Project budget:
+			select(id="budget" name="budget" placeholder="PRESUPUESTO" required)
+				option(value="default" id="default") PRESUPUESTO
+				option(value="lessthanone") Menos de 1000 &euro;
+				option(value="onetotwo") Entre 1000 y 2000 &euro;
+				option(value="twotothree") Entre 2000 y 3000 &euro;
+				option(value="threetofive") Entre 3000 y 5000 &euro;
+				option(value="morethanfive") Más de 5000 &euro;
+				option(value="noidea") No lo sé
+		p.field
+			label(for="message") The datails:
+			textarea(cols="50", rows="6" name="message" placeholder="DESCRIPCION PROYECTO" required)
+
+		div#status
+			.button
+				button(id="submit") ENVIAR
+				
+				div#success.message Mensaje envíado
+
+				div#error.message Algo salió mal

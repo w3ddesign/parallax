@@ -1,0 +1,25 @@
+section#third-section
+
+    <!-- Portfolio MIXIN -->
+
+    mixin portfolio(img, title, description, link)
+      a(href="#{link}")
+        figure
+            img(src="#{img}") 
+            figcaption
+                h4 #{title}
+                span
+                p #{description}
+
+    h2#portfolio PORTFOLIO
+    h3 Artwork
+    span.line
+
+    article.portfolio
+
+        +portfolio("images/porfolio/octogon.jpg", "Octogon Sport Center", "Gimnasio", "#")
+        +portfolio("images/porfolio/persovuses.jpg", "Persovuses", "ONG", "#")
+        +portfolio("images/porfolio/w3d.jpg", "W3D Web Design", "Estudio diseño", "#")
+
+
+    hr

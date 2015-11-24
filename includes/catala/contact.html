@@ -1,0 +1,42 @@
+
+<section id="fourth-section">
+  <h2 id="contact">CONTACTA'NS</h2>
+  <h3>Acceptem les vostres propostes</h3><span class="line"></span>
+  <form action="form.php" method="POST">
+    <p class="field">
+      <label for="name">Name: </label>
+      <input type="text" id="name" placeholder="NOM" required="required"/>
+    </p>
+    <p class="field">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" placeholder="EMAIL" required="required"/>
+    </p>
+    <p class="field">
+      <label for="subject">What can I help you with?</label>
+      <input type="text" id="subject" placeholder="MOTIU"/>
+    </p>
+    <p class="field">
+      <label for="budget">Project budget:</label>
+      <select id="budget" placeholder="PRESSUPOST" required="required">
+        <option value="default" id="default">PRESSUPOST</option>
+        <option value="lessthanone">Menys de 1000 &euro;</option>
+        <option value="onetotwo">Entre 1000 i 2000 &euro;</option>
+        <option value="twotothree">Entre 2000 i 3000 &euro;</option>
+        <option value="threetofive">Entre 3000 i 5000 &euro;</option>
+        <option value="morethanfive">Mes de 5000 &euro;</option>
+        <option value="noidea">No estic segur</option>
+      </select>
+    </p>
+    <p class="field">
+      <label for="message">The datails:</label>
+      <textarea cols="50" rows="6" placeholder="DESCRIPCIÓ PROJECTE" required="required"></textarea>
+    </p>
+    <div id="status">
+      <div class="button">
+        <button id="submit">ENVIAR</button>
+        <div id="success" class="message">Missatge enviat</div>
+        <div id="error" class="message">Error al enviar</div>
+      </div>
+    </div>
+  </form>
+</section>

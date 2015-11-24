@@ -1,0 +1,192 @@
+//VARIABLES
+
+$font: 'ralewaymedium', sans-serif
+$header-font: 'bitter', serif
+
+$scale: 1.5
+$guide: 1200px
+
+//COLORES
+
+$dark-blue: #4a4b4c
+$dark-brown: #575c2b
+$light-grey: #bebebe
+$light-green: #a5b051
+$light-yellow: #ebc562
+$light-bg: #efefef
+
+
+//ESTILOS COMUNES
+
+
+body,html
+	font-family: $font
+	font-size: 100%			/*EQUIVALE A 16px en la mayoria de navegadores*/
+	line-height: 1		/*EQUIVALE A 100% en la mayoria de navegadores*/
+	text-size-adjust: 100%
+	-moz-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+	margin: 0
+	padding: 0
+	overflow-x: hidden
+
+
+p
+	font-family: $font
+	font-size: 1.5em				/*18px/16px= 1.125em;*/
+	line-height: 1.4			/*22px/16px= 1.375*/
+
+h1
+	font-family: $header-font
+	font-size: 3.375em
+	line-height: 1.3333
+	
+
+h2
+	font-family: $header-font
+	color: $light-green
+	font-size: 2.25em
+	line-height: 1.3333
+	max-width: 500px
+	text-align: center
+	margin: 0 auto
+	padding-top: 3em
+	padding-bottom: 0.5em
+
+	
+h3
+	font-family: $header-font
+	font-size: 1.6875em
+	line-height: 1.07
+	max-width: 600px
+	text-align: center
+	margin: 0 auto
+	padding-bottom: 1em
+
+h4
+	font-size: 1.125em
+	font-family: $header-font
+	line-height: 1.3333
+
+
+img
+	text-align: center
+	max-width: 100%
+	height: auto
+	width: auto
+
+a
+	display: inline-block
+	width: 100%
+	height: auto
+	text-decoration: none
+
+ul,li
+	list-style-type: none
+
+.line
+	display: block
+	width: 150px
+	margin: 0 auto
+	border-bottom: 3px solid $light-grey
+
+strong
+	color: $light-green
+
+hr
+	border-bottom: 1px solid #d3d3d3
+	border-top: none
+	min-width: 300px
+	max-width: 600px
+	margin: 0 auto
+	width: 90%
+
+
+
+.underline
+	display: block
+	position: relative
+	padding-bottom: 3px
+	overflow: hidden
+	color: white
+	max-width: 245px
+
+	&:hover:after, &:focus:after, &:active:after
+		width: 100%
+
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 50%
+		width: 0%
+		transform: translateX(-50%)
+		height: 2px
+		background: white
+		transition: .35s
+
+
+
+/* EN NUESTRO CASO
+
+	PUNTO DE PARTIDA: 
+
+	p{
+		font-size: 1.125em;    17px/16px base= 1.063em  
+		line-height: 1.375;	  20px/16px base= 1.25  
+	}
+	h1{
+		font-size: 3.375em;    3 veces el tamaño de los parrafos (3x1.125)  
+		line-height: 1.375;     Mismo Line-Height 
+	}
+	h2{
+		font-size: 2.25em;    2 veces el tamaño de los parrafos (2x1.125)  
+		line-height: 1.375;     Mismo Line-Height  
+	}
+	
+	Para sacar los valores correctos y calcular el resto de elementos que no tienen un estandar (h3,h4..)
+	Calculamos la escala (scale) de la siguiente forma; p font x p line = 1.125x1.375= 1.546875
+	Redondeamos hacia abajo 1.546875 = 1.5 (Este valor es la escala)
+
+	Scale = 1.5
+	3/4 Scale = 1.125
+	1/2 Scale = 0.75		Con estos valores se hacen nuevos calculos
+	1/4 Scale = 0.375
+
+	PUNTO FINAL
+
+	p{
+		font-size: 1.125em;      
+		line-height: 1.3333;	1.5 (Scale)/ 1.125= 1.33333
+	}
+	h1{
+		font-size: 3.189em;      
+		line-height: 1.3333;    
+	}
+	h2{
+		font-size: 2.126em;    
+		line-height: 1.3333;      
+	}
+
+	h3{
+		font-size: 1.6875em;	1.5 x 1.125=1.6875em
+		line-height: 1.07;	1.5/1.6875 = 0.889 (DEMASIADO PEQUEÑO)
+								Incrementamos en 1/2 de Scale
+								2.25/1.6875 = 1.3333 (DEMASIADO GRANDE)
+								Incrementamos en 1/4 de Scale
+								2/1.875 = 1.07  (OK!)
+
+	}
+	h4{
+		font-size:: 1.125em;		1.5x0.75=1.125em
+		line-height: 1.3333;		1.5/1.125=1.3333
+	}
+
+	MODIFICAMOS LOS VALORES ANTERIORES POR LOS NUEVOS
+
+	*/
+
+@media screen and (max-width: 45em)
+	body,html
+		font-size: 95%

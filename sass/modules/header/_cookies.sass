@@ -1,0 +1,65 @@
+//COOKIES ALERT
+
+#cookie
+  position: fixed
+  bottom: 0
+  left: 0
+  text-align: center
+  width: 100%
+  background-color: $dark-blue
+  z-index: 3
+  opacity: 0.8
+  padding: 0.5em 0
+  z-index: 99
+  p
+    color: white
+    width: 80%
+    margin: 0 auto
+    font-size: 1em
+
+a.cookie_close 
+  color: #fff
+  width: 35px
+  text-decoration: none
+  background-color: $dark-blue
+  transition: all 0.5s ease
+  +position(absolute, 8% 1% null null)
+
+  &:hover
+    color: $light-yellow
+
+a.cookie_more 
+  color: #FFF
+  width: 35px
+  text-decoration: none
+  transition: 0.25s
+  +position(absolute, 8% 4% null null)
+
+  &:hover
+    color: $light-yellow
+
+#cookie_more_info
+  display: none
+  color: white
+
+
+@media screen and (max-width: 65em)
+  #cookie
+    p
+      font-size: 0.8em
+
+  a.cookie_more
+    +position(absolute, 12% 6% null null)
+
+@media screen and (max-width: 55em)
+
+  a.cookie_close
+    +position(absolute, 30% 1% null null)
+
+  a.cookie_more 
+    +position(absolute, 30% null null 1%)
+
+  
+
+
+

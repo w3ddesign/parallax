@@ -1,0 +1,56 @@
+.logo
+	+position(fixed, 1% null null 1%)
+
+#greetings
+	background: $light-bg
+	position: relative
+	
+	.back
+		+position(fixed, 3% 2% null null)
+		
+		a
+			color: $light-green
+			font-size: 1.3em
+			display: block
+			position: relative
+			padding-bottom: 3px
+			overflow: hidden
+
+			&:hover:after, &:focus:after, &:active:after
+				width: 100%
+
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 50%
+				width: 0%
+				transform: translateX(-50%)
+				height: 2px
+				background: $light-green
+				transition: .35s
+
+	article
+		max-width: 650px
+		margin: 0 auto
+		width: 90%
+		font-size: 0.8em
+		padding: 3em 0
+
+		p
+			margin-top: 2em
+
+	.sign
+		text-align: right
+		padding-top: 6em
+
+@media screen and (max-width: 81em)
+
+	#greetings
+
+		.logo
+			+position(absolute, 1% null null 1%)
+
+		.back
+			+position(absolute, 2.3% 2% null null)
+		

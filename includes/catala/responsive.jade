@@ -1,0 +1,43 @@
+section#responsive-design
+
+	section.responsive
+
+		article.responsive-description
+			h2 DISSENY RESPONSIU
+			p
+				|Actualment es navega més desde dispositius mòvils que desde els ordinadors de casa, per això les nostres webs
+				strong  s'adapten a qualsevol dispositiu,
+				|  fins i tot aquells que no s'han inventat.
+
+			li.nav-dots
+				label(for="img-1", class="nav-dot", id="img-dot-1")
+					include icons/mobile.jade
+
+				label(for="img-2", class="nav-dot", id="img-dot-2")
+					include icons/tablet.jade
+				
+
+				label(for="img-3", class="nav-dot", id="img-dot-3")
+					include icons/laptop.jade
+				
+				
+		article.responsive-figures
+			input(type="radio", name="radio-btn", id="img-1" checked)
+			div.slide
+				figure
+					img(src="images/responsive/smartphone.svg")
+
+			input(type="radio", name="radio-btn", id="img-2")
+			div.slide
+				figure
+					img(src="images/responsive/tablet.svg")
+	
+
+			input(type="radio", name="radio-btn", id="img-3")
+			div.slide
+				figure
+					img(src="images/responsive/laptop.svg")
+
+		div.all-screens
+			figure
+				img(src="images/responsive/smallslider.svg", alt="all screens")
